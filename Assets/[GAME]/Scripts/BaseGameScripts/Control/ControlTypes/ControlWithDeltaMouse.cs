@@ -45,7 +45,8 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         protected override void OnTapHold()
         {
             base.OnTapHold();
-            GetInput();
+            _calculateDeltaMouse.CalculateDeltaMousePos();      
+            OnDraggedAsDesired();
         }
 
         protected override void OnTapUp()
@@ -58,12 +59,6 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         {
             base.OnTapHoldAndNotMove();
             inputStopped?.Invoke();
-        }
-
-        public override void GetInput()
-        {
-            _calculateDeltaMouse.CalculateDeltaMousePos();      
-            OnDraggedAsDesired();
         }
 
         private void OnDraggedAsDesired()

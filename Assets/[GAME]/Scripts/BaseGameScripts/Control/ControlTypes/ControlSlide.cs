@@ -19,11 +19,6 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
             _screenWidth = Screen.width;
             _calculateDeltaMouse = new CalculateDeltaMouse();
         }
-        
-        public override void GetInput()
-        {
-            Slide();
-        }
 
         protected override void OnTapDown()
         {
@@ -35,7 +30,7 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         {
             base.OnTapHold();
             _calculateDeltaMouse.CalculateDeltaMousePos();
-            GetInput();
+            Slide();
         }
 
         private void Slide()

@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace Scripts.BaseGameScripts.CoinControl
 {
-    public class Coin : ComponentBase, IPoolObject<Coin>
+    public class Coin : BaseComponent, IPoolObject<Coin>
     {
         [SerializeField]
         private Image image;

@@ -1,20 +1,21 @@
-using UnityEngine;
+using System;
 
-namespace Scripts.GameScripts
+namespace Scripts.BaseGameSystemRelatedScripts
 {
-    [SerializeField]
+    [Serializable]
     public class MinMaxValue
     {
         private float _rangeBetweenMaxAndMin;
-        public float MaxVal;
-        public float MinVal;
-
+      
+        public float minVal;
+        public float maxVal;
+        
         public float RangeBetweenMaxAndMin
         {
             get
             {
                 if (_rangeBetweenMaxAndMin <= 0)
-                    _rangeBetweenMaxAndMin = MaxVal - MinVal;
+                    _rangeBetweenMaxAndMin = maxVal - minVal;
 
                 return _rangeBetweenMaxAndMin;
             }

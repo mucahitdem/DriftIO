@@ -10,7 +10,7 @@ using UnityEngine.UI;
 
 namespace Scripts.GameScripts.Grid
 {
-    public class GridElement : ComponentBase
+    public class GridElement : BaseComponent
     {
         [SerializeField]
         private Image outline;

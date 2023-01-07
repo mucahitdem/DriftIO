@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Scripts.GameScripts.Animator_Control
 {
-    public class AnimatorManager : ComponentBase
+    public class AnimatorManager : BaseComponent
     {
         [SerializeField]
         private AnimatorParameterController animatorParameterController;

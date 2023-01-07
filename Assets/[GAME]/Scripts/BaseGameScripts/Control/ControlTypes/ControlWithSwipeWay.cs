@@ -20,11 +20,6 @@ namespace Scripts.BaseGameScripts.Control.ControlTypes
         protected override void OnTapHold()
         {
             base.OnTapHold();
-            GetInput();
-        }
-
-        public override void GetInput()
-        {
             _calculateDeltaMouse.CalculateDeltaMousePos();      
             CalculateDirection();
         }

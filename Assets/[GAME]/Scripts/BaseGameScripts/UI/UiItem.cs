@@ -3,7 +3,7 @@
 
 namespace Scripts.BaseGameScripts.UI
 {
-    public class UiItem : ComponentBase
+    public class UiItem : BaseComponent
     {
         public string id;
     }

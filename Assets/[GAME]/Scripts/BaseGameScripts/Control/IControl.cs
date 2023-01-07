@@ -1,7 +1,6 @@
-namespace Scripts.GameScripts
+namespace Scripts.BaseGameScripts.Control
 {
     public interface IControl
     {
-        void GetInput();
     }
 }

@@ -3,7 +3,7 @@ using Scripts.BaseGameScripts.State;
 
 namespace Scripts.State.GameStates
 {
-    public class GameState03_0Lose : BaseGameState
+    public class GameState03_0Lose : GameState
     {
         public override void InitState()
         {

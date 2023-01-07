@@ -26,7 +26,7 @@ namespace Scripts.BaseGameScripts.State
 
         private void AddStates()
         {
-            var subClasses = AssemblyManager.GetSubClassesOfType(typeof(BaseGameState));
+            var subClasses = AssemblyManager.GetSubClassesOfType(typeof(GameState));
 
             for (var i = 0; i < subClasses.Count; i++)
             {
