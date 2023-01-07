@@ -947,7 +947,7 @@ SpringJoint:
   m_ConnectedAnchor: {x: 0, y: 0, z: 0}
   serializedVersion: 2
   m_Spring: 1e+11
-  m_Damper: 0.2
+  m_Damper: 0.3
   m_MinDistance: 7
   m_MaxDistance: 0
   m_Tolerance: 0.025
@@ -1079,8 +1079,8 @@ MonoBehaviour:
   clampValues:
     minVal: -120
     maxVal: 120
-  lerpMultiplier: 1.25
-  mouseDamp: 50
+  lerpMultiplier: 1.5
+  mouseDamp: 70
 --- !u!114 &1037980192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13116,8 +13116,8 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6089130089689844421}
   serializedVersion: 2
-  m_Mass: 50
-  m_Drag: 2
+  m_Mass: 70
+  m_Drag: 2.5
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
