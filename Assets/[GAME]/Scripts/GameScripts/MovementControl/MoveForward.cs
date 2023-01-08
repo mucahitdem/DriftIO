@@ -10,7 +10,7 @@ namespace Scripts.GameScripts.MovementControl
         
         public void Move() // call on fixed update
         {
-            TransformOfObj.position += TransformOfObj.forward * (forwardSpeed * Time.deltaTime);
+            //TransformOfObj.position += TransformOfObj.forward * (forwardSpeed * Time.deltaTime);
         }
     }
 }

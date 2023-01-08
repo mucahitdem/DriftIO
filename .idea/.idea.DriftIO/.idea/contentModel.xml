@@ -56,7 +56,7 @@
                 <e p="MoneyConverter.cs" t="Include" />
                 <e p="ShortCutManager.cs" t="Include" />
                 <e p="SingletonMono.cs" t="Include" />
-                <e p="TimeManager.cs" t="Include" />
+                <e p="TimeScalingManager.cs" t="Include" />
               </e>
               <e p="Input" t="Include">
                 <e p="Input.cs" t="Include" />
@@ -121,6 +121,10 @@
               <e p="Others" t="Include">
                 <e p="TapManager.cs" t="Include" />
               </e>
+              <e p="Timer" t="Include">
+                <e p="Timer.cs" t="Include" />
+                <e p="TimerManager.cs" t="Include" />
+              </e>
               <e p="UI" t="Include">
                 <e p="CoinUi.cs" t="Include" />
                 <e p="NextButton.cs" t="Include" />
@@ -139,15 +143,32 @@
               </e>
             </e>
             <e p="GameScripts" t="Include">
+              <e p="Ability System" t="Include">
+                <e p="IAbility.cs" t="Include" />
+                <e p="RotatingBall.cs" t="Include" />
+                <e p="WreckingBall.cs" t="Include" />
+              </e>
               <e p="Camera" t="Include">
                 <e p="CameraManager.cs" t="Include" />
               </e>
               <e p="ControlScript" t="Include">
                 <e p="ControlSwipeAndRotate.cs" t="Include" />
               </e>
+              <e p="Defs.cs" t="Include" />
               <e p="MovementControl" t="Include">
                 <e p="IMovement.cs" t="Include" />
                 <e p="MoveForward.cs" t="Include" />
+              </e>
+              <e p="ParachuteControl" t="Include">
+                <e p="Parachute.cs" t="Include" />
+                <e p="ParachuteBox.cs" t="Include" />
+                <e p="ParachuteCreator.cs" t="Include" />
+              </e>
+              <e p="Platform" t="Include">
+                <e p="PlatformCollider.cs" t="Include" />
+                <e p="PlatformManager.cs" t="Include" />
+                <e p="PlatformPiece.cs" t="Include" />
+                <e p="PlatformPiecesManager.cs" t="Include" />
               </e>
               <e p="Player" t="Include">
                 <e p="PlayerManager.cs" t="Include" />
@@ -156,6 +177,7 @@
                 <e p="IRope.cs" t="Include" />
                 <e p="RopeWithLineRenderer.cs" t="Include" />
               </e>
+              <e p="ShieldCreator.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -489,6 +511,20 @@
                 <e p="TestTagAttribute.cs" t="Include" />
               </e>
             </e>
+          </e>
+        </e>
+        <e p="LowPolyWater_Pack" t="Include">
+          <e p="LowPoly Island" t="Include">
+            <e p="Credits.txt" t="Include" />
+          </e>
+          <e p="Scripts" t="Include">
+            <e p="Editor" t="Include">
+              <e p="GeneratePlane.cs" t="Include" />
+            </e>
+            <e p="LowPolyWater.cs" t="Include" />
+          </e>
+          <e p="Shaders" t="Include">
+            <e p="WaterShaded.shader" t="Include" />
           </e>
         </e>
         <e p="Others" t="Include">
