@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Turn
-  - Diamond
-  - EndGame
+  - Ground
+  - AI
+  - PowerUp
   layers:
   - Default
   - TransparentFX

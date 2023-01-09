@@ -1,8 +1,7 @@
-﻿using Scripts.BaseGameScripts;
-using Scripts.BaseGameScripts.EventManagement;
+﻿using Scripts.BaseGameScripts.EventManagement;
+using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameSystemRelatedScripts.Timer;
 using UnityEngine;
-using UnityEngine.AI;
 using Random = UnityEngine.Random;
 
 namespace Scripts.GameScripts.ParachuteControl
@@ -17,21 +16,32 @@ namespace Scripts.GameScripts.ParachuteControl
         
         [SerializeField]
         private float createHeight;
+
+        [SerializeField]
+        private Parachute parachute;
         
 
         public override void SubscribeEvent()
         {
             timer.onTimerEnded += CreateParachute;
+            GameManager.Instance.PlatformRadiusController.onPlatformRadiusChanged += UpdateRadius;
         }
 
         public override void UnsubscribeEvent()
         {
             timer.onTimerEnded -= CreateParachute;
+            GameManager.Instance.PlatformRadiusController.onPlatformRadiusChanged -= UpdateRadius;
+        }
+
+        private void UpdateRadius(float newRadius)
+        {
+            radius = newRadius;
         }
         
         private void CreateParachute()
         {
-            Parachute parachute = GlobalReferences.Instance.poolManager.parachutePool.PullObj();
+            DebugHelper.LogRed("CREATED PARACHUTE");
+            Parachute parachute = Instantiate(this.parachute);//GlobalReferences.Instance.poolManager.parachutePool.PullObj();
             parachute.TransformOfObj.position = GenerateRandomPosition();
         }
 

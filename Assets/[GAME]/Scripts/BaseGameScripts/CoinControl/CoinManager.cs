@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using BayatGames.SaveGameFree;
+using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameScripts.SaveAndLoad;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ namespace Scripts.BaseGameScripts.CoinControl
         private float TotalCoins { get; set; }
         
         
-        protected override void OnAwake()
+        protected void OnAwake()
         {
             Load();
             onCoinCountChanged?.Invoke(TotalCoins);

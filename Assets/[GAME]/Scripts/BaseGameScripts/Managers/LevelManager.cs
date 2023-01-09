@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 namespace Scripts.BaseGameScripts.Managers
 {
-    public class GameManager : MonoBehaviour, ISaveAndLoad
+    public class LevelManager : MonoBehaviour, ISaveAndLoad
     {
         [Title("Private Variables")]
         private int _fakeLevelNum = 1;

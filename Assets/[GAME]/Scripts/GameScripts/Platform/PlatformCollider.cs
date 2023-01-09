@@ -7,29 +7,19 @@ namespace Scripts.GameScripts.Platform
 {
     public class PlatformCollider : BaseComponent
     {
-        [SerializeField]
-        private PlatformColliderVariables platformColliderVariables;
-        
         public override void SubscribeEvent()
         {
-            PlatformManager.onPlatformWidened += ScaleCollider;
+            GameManager.Instance.PlatformRadiusController.onPlatformRadiusChanged += ScaleCollider;
         }
 
         public override void UnsubscribeEvent()
         {
-            PlatformManager.onPlatformWidened -= ScaleCollider;
+            GameManager.Instance.PlatformRadiusController.onPlatformRadiusChanged -= ScaleCollider;
         }
         
-        private void ScaleCollider(int index)
+        private void ScaleCollider(float radius)
         {
-            float scale = platformColliderVariables.platformScales[index];
-            TransformOfObj.DOScale(new Vector3(scale, TransformOfObj.localScale.y, scale),.3f);
+            TransformOfObj.DOScale(new Vector3(radius, TransformOfObj.localScale.y, radius),.3f);
         }
-    }
-
-    [Serializable]
-    public class PlatformColliderVariables
-    {
-        public float[] platformScales;
     }
 }

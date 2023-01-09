@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Scripts.BaseGameScripts.Helper;
 using UnityEngine;
 
 namespace Scripts.BaseGameSystemRelatedScripts.Timer
@@ -6,13 +7,10 @@ namespace Scripts.BaseGameSystemRelatedScripts.Timer
     public class TimerManager : SingletonMono<TimerManager>
     {
         private List<Timer> _timerList = new List<Timer>();
-        
-        protected override void OnAwake()
-        {
-        }
 
         public void AddNewTimer(Timer timer)
         {
+            DebugHelper.LogGreen("TIMER ADDED : " + timer.name);
             _timerList.Add(timer);    
         }
 

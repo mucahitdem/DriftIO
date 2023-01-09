@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 namespace Scripts.BaseGameScripts.CoinControl
 {
-    public class Coin : BaseComponent, IPoolObject<Coin>
+    public class Coin : BaseComponent
     {
         [SerializeField]
         private Image image;
@@ -27,31 +27,5 @@ namespace Scripts.BaseGameScripts.CoinControl
         {
             Rect.DOMove(targetPos, duration);
         }
-
-        #region Pool
-
-        public PoolingPattern<Coin> Pool { get; set; }
-        [FoldoutGroup("Pool")]
-        [field:SerializeField]
-        public Coin ObjToPool { get; set; }
-        [FoldoutGroup("Pool")]
-        [field:SerializeField]
-        public int ItemCount { get; set; }
-        [FoldoutGroup("Pool")]
-        [field:SerializeField]
-        public HideFlags HideFlag { get; set; }
-        
-        public void AddToPool()
-        {
-            Pool.AddBackToPool(this);
-        }
-
-        public void SetPool(PoolingPattern<Coin> pool)
-        {
-            Pool = pool;
-        }
-
-        #endregion
-        
     }
 }

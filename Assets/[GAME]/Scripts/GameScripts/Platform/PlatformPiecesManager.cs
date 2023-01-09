@@ -22,7 +22,7 @@ namespace Scripts.GameScripts.Platform
 
         public override void UnsubscribeEvent()
         {
-            PlatformManager.onPlatformWidened -= StartReleasingPieces;
+           PlatformManager.onPlatformWidened -= StartReleasingPieces;
         }
         
         private void StartReleasingPieces(int index)

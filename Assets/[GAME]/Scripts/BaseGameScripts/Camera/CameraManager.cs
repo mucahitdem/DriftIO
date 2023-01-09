@@ -1,4 +1,5 @@
 ﻿using System;
+using Scripts.BaseGameScripts.Helper;
 
 namespace Scripts.BaseGameScripts.Camera
 {
@@ -17,7 +18,7 @@ namespace Scripts.BaseGameScripts.Camera
             set => _mainCamera = value;
         }
 
-        protected override void OnAwake()
+        protected void OnAwake()
         {
             throw new NotImplementedException();
         }

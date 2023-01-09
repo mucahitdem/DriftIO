@@ -14,6 +14,9 @@ namespace Scripts.GameScripts
         private GameObject shield;
 
         [SerializeField]
+        private Transform parent;
+        
+        [SerializeField]
         private int count;
 
         [SerializeField]
@@ -33,7 +36,7 @@ namespace Scripts.GameScripts
             for (int i = 0; i < count; i++)
             {
                 Vector3 pos = new Vector3(Mathf.Cos(_currentAngle) * radius, 0, Mathf.Sin(_currentAngle) * radius);
-                Transform shieldCreated = Instantiate(shield, transform).transform;
+                Transform shieldCreated = Instantiate(shield, parent).transform;
                 shieldCreated.position = pos;
                 shieldCreated.LookAt(Vector3.zero, Vector3.up);
                 

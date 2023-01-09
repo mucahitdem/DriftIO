@@ -68,8 +68,5 @@ namespace Scripts.BaseGameSystemRelatedScripts.Timer
         
         [Title("Repeat")]
         public bool isRepeating;
-        // public bool finiteRepeat; // not working yet
-        // [ShowIf("finiteRepeat")]
-        // public int repeatCount;
     }
 }

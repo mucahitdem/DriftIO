@@ -8,7 +8,7 @@ namespace Scripts.BaseGameSystemRelatedScripts.UI
         protected override void OnClick()
         {
             base.OnClick();
-            GlobalReferences.Instance.gameManager.RetryLevel();
+            GlobalReferences.Instance.levelManager.RetryLevel();
         }
     }
 }

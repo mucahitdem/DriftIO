@@ -13,7 +13,7 @@ namespace Scripts.BaseGameScripts.Pool
         private Parachute parachute;
 
         [SerializeField]
-        private ParachuteBox parachuteBox;
+        private PowerUp powerUp;
         
         [HideInInspector]
         public PoolingPattern<Coin> coinPool;
@@ -24,7 +24,7 @@ namespace Scripts.BaseGameScripts.Pool
 
         
         [HideInInspector]
-        public PoolingPattern<ParachuteBox> parachuteBoxPool;
+        public PoolingPattern<PowerUp> parachuteBoxPool;
         
         protected void Awake()
         {
@@ -33,9 +33,9 @@ namespace Scripts.BaseGameScripts.Pool
 
         private void StartCreation()
         {
-            coinPool = new PoolingPattern<Coin>(coin.ObjToPool);
-            parachutePool = new PoolingPattern<Parachute>(parachute.ObjToPool);
-            parachuteBoxPool = new PoolingPattern<ParachuteBox>(parachuteBox.ObjToPool);
+            // coinPool = new PoolingPattern<Coin>(coin);
+            // parachutePool = new PoolingPattern<Parachute>(parachute);
+            // parachuteBoxPool = new PoolingPattern<ParachuteBox>(parachuteBox);
         }
     }
 }

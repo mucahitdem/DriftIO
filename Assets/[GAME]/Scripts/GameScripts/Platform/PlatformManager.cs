@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using Scripts.BaseGameScripts.EventManagement;
-using Scripts.BaseGameScripts.Helper;
 using Scripts.BaseGameSystemRelatedScripts.Timer;
 using Sirenix.OdinInspector;
 using UnityEngine;
@@ -18,6 +15,9 @@ namespace Scripts.GameScripts.Platform
         private Timer timer;
         
         private int _groupIndexToRelease = 0;
+
+        #region Subs
+
         public override void SubscribeEvent()
         {
             timer.onTimerEnded += ReleaseGroup;
@@ -27,6 +27,8 @@ namespace Scripts.GameScripts.Platform
         {
             timer.onTimerEnded -= ReleaseGroup;
         }
+
+        #endregion
         
         private void ReleaseGroup()
         {

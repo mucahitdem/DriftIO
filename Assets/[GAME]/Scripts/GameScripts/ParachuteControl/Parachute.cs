@@ -1,52 +1,39 @@
-﻿using Scripts.BaseGameScripts.Component;
-using Scripts.BaseGameScripts.Pool;
-using Sirenix.OdinInspector;
+﻿using System;
+using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.Helper;
+using Scripts.GameScripts.Ability_System;
 using UnityEngine;
 
 namespace Scripts.GameScripts.ParachuteControl
 {
-    public class Parachute : BaseComponent , IPoolObject<Parachute>
+    public class Parachute : BaseComponent
     {
+        [SerializeField]
+        private PowerUp powerUp;
+
+        [SerializeField]
+        private IAbility ability;
+
+        private void Awake()
+        {
+            ability = GetComponent<IAbility>();
+        }
+
         private void OnCollisionEnter(Collision other)
         {
+            DebugHelper.LogRed(other.transform.tag);
             if (other.transform.CompareTag(Defs.TAG_GROUND))
             {
-                
+                CreateBox();
+                Go.SetActive(false);
             }
         }
 
-        private void DisableParachute()
+        private void CreateBox()
         {
-            
+            var position = TransformOfObj.position;
+            PowerUp createdPowerUp = Instantiate(powerUp, new Vector3(position.x, 0, position.z), Quaternion.identity);
+            createdPowerUp.Insert(ability);
         }
-
-        #region Pool Variables
-
-        [FoldoutGroup("Pool")]
-        public PoolingPattern<Parachute> Pool { get; set; }
-        
-        [FoldoutGroup("Pool")]
-        [ShowInInspector]
-        public Parachute ObjToPool { get; set; }
-        [FoldoutGroup("Pool")]
-        [ShowInInspector]
-        public int ItemCount { get; set; }
-        
-        [FoldoutGroup("Pool")]
-        [ShowInInspector]
-        public HideFlags HideFlag { get; set; }
-        
-        
-        public void AddToPool()
-        {
-            Pool.AddBackToPool(this);
-        }
-
-        public void SetPool(PoolingPattern<Parachute> pool)
-        {
-            Pool = pool;
-        }
-
-        #endregion
     }
 }

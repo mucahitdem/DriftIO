@@ -64,7 +64,7 @@
               </e>
               <e p="Managers" t="Include">
                 <e p="EnvironmentManager.cs" t="Include" />
-                <e p="GameManager.cs" t="Include" />
+                <e p="LevelManager.cs" t="Include" />
               </e>
               <e p="Mediator" t="Include">
                 <e p="EventHelper.cs" t="Include" />
@@ -148,6 +148,11 @@
                 <e p="RotatingBall.cs" t="Include" />
                 <e p="WreckingBall.cs" t="Include" />
               </e>
+              <e p="AI" t="Include">
+                <e p="AIManager.cs" t="Include" />
+              </e>
+              <e p="BallBehindCar.cs" t="Include" />
+              <e p="BasePlayerAndAi.cs" t="Include" />
               <e p="Camera" t="Include">
                 <e p="CameraManager.cs" t="Include" />
               </e>
@@ -155,20 +160,22 @@
                 <e p="ControlSwipeAndRotate.cs" t="Include" />
               </e>
               <e p="Defs.cs" t="Include" />
+              <e p="GameManager.cs" t="Include" />
               <e p="MovementControl" t="Include">
                 <e p="IMovement.cs" t="Include" />
                 <e p="MoveForward.cs" t="Include" />
               </e>
               <e p="ParachuteControl" t="Include">
                 <e p="Parachute.cs" t="Include" />
-                <e p="ParachuteBox.cs" t="Include" />
                 <e p="ParachuteCreator.cs" t="Include" />
+                <e p="PowerUp.cs" t="Include" />
               </e>
               <e p="Platform" t="Include">
                 <e p="PlatformCollider.cs" t="Include" />
                 <e p="PlatformManager.cs" t="Include" />
                 <e p="PlatformPiece.cs" t="Include" />
                 <e p="PlatformPiecesManager.cs" t="Include" />
+                <e p="PlatformRadiusController.cs" t="Include" />
               </e>
               <e p="Player" t="Include">
                 <e p="PlayerManager.cs" t="Include" />
