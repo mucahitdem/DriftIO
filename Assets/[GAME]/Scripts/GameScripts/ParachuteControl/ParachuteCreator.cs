@@ -40,9 +40,8 @@ namespace Scripts.GameScripts.ParachuteControl
         
         private void CreateParachute()
         {
-            DebugHelper.LogRed("CREATED PARACHUTE");
-            Parachute parachute = Instantiate(this.parachute);//GlobalReferences.Instance.poolManager.parachutePool.PullObj();
-            parachute.TransformOfObj.position = GenerateRandomPosition();
+            Parachute createdParachute = Instantiate(parachute);//GlobalReferences.Instance.poolManager.parachutePool.PullObj();
+            createdParachute.TransformOfObj.position = GenerateRandomPosition();
         }
 
         private Vector3 GenerateRandomPosition()

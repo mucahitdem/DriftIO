@@ -1,6 +1,6 @@
-﻿using System;
-using DG.Tweening;
+﻿using DG.Tweening;
 using Scripts.BaseGameScripts.Component;
+using Scripts.BaseGameScripts.Helper;
 using UnityEngine;
 
 namespace Scripts.GameScripts.Platform
@@ -14,6 +14,9 @@ namespace Scripts.GameScripts.Platform
 
         public override void UnsubscribeEvent()
         {
+            if(!GameManager.Instance)
+                return;
+            
             GameManager.Instance.PlatformRadiusController.onPlatformRadiusChanged -= ScaleCollider;
         }
         

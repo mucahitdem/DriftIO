@@ -18,9 +18,8 @@ namespace Scripts.BaseGameScripts.Camera
             set => _mainCamera = value;
         }
 
-        protected void OnAwake()
+        protected override void OnAwake()
         {
-            throw new NotImplementedException();
         }
     }
 }

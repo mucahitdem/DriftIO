@@ -1,40 +1,16 @@
-﻿using System;
-using Scripts.BaseGameScripts.Control;
-using Scripts.GameScripts.Rope;
+﻿using Scripts.BaseGameScripts;
+using Scripts.BaseGameScripts.State;
 using UnityEngine;
 
 namespace Scripts.GameScripts.Player
 {
-    public class PlayerManager : MonoBehaviour
+    public class PlayerManager : BasePlayerAndAi
     {
-        private IControl _control;
-        private IMovement _movement;
-        private IRope _rope;
-        
-        private void Awake()
+        protected override void Die()
         {
-            _control = GetComponent<IControl>();
-            _movement = GetComponent<IMovement>();
-            _rope = GetComponent<IRope>();
-        }
-        
-        private void Update()
-        {
-            _rope?.UpdateRope();
-        }
-        
-        
-        private void FixedUpdate()
-        {
-            _movement?.Move();
-        }
-
-        private void OnTriggerEnter(Collider other)
-        {
-            if (other.CompareTag(Defs.TAG_POWER_UP))
-            {
-                
-            }
+            base.Die();
+            // end game 
+            GlobalReferences.Instance.uiManager.ShowScreen("loseScreen");
         }
     }
 }

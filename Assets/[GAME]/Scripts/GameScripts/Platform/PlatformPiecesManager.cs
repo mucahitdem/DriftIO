@@ -9,6 +9,8 @@ namespace Scripts.GameScripts.Platform
 {
     public class PlatformPiecesManager : EventSubscriber
     {
+        public int PlatformPieceCount => platformPieceGroups.Count;
+        
         [FoldoutGroup("Platform Piece Groups")]
         [SerializeField]
         private List<PlatformPieceGroup> platformPieceGroups = new List<PlatformPieceGroup>();

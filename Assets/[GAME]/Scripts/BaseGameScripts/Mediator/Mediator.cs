@@ -1,11 +1,11 @@
 ﻿using System;
 using Scripts.BaseGameScripts.Helper;
 
-namespace Scripts.Mediator
+namespace Scripts.BaseGameScripts.Mediator
 {
     public class Mediator : SingletonMono<Mediator>
     {
-        protected void OnAwake()
+        protected override void OnAwake()
         {
             //
         }

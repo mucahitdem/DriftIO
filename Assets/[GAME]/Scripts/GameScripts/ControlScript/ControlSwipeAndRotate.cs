@@ -2,7 +2,7 @@
 using Scripts.BaseGameSystemRelatedScripts;
 using UnityEngine;
 
-namespace Scripts.GameScripts
+namespace Scripts.GameScripts.ControlScript
 {
     public class ControlSwipeAndRotate : BaseControlGetDeltaMouse
     {

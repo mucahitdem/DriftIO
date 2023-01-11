@@ -3,5 +3,9 @@
     public interface IRope
     {
         void UpdateRope();
+
+        void EnableRope();
+
+        void DisableRope();
     }
 }

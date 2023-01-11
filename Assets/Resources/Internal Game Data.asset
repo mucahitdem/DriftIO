@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e634a76ba50c4894a8c6c61f38b38e72, type: 3}
+  m_Name: Internal Game Data
+  m_EditorClassIdentifier: 
+  gameData:
+    ballHitForce: 30000
+    rotatingBallHitForce: 1000
+    rotateSpeed: 2.5
+    turnSpeed: 5
+    maxPercentageAiCanBeAwayOnArenaCenter: 90
+    updateNearestOpponentEveryXSecond: 1
+    ballHitRadius: 10
+    moveSpeed: 10
+    goodEmojis:
+    - {fileID: 21300000, guid: b92877084fc7001458da07a6ca51d5b3, type: 3}
+    - {fileID: 21300000, guid: 24977c64b7bb1df4a97e003150670dd1, type: 3}
+    - {fileID: 21300000, guid: 2e9a364ddc3cb6a43b2b6521ecfe6af3, type: 3}
+    - {fileID: 21300000, guid: 3a4909745bd5f0640a2e39698be764dc, type: 3}
+    - {fileID: 21300000, guid: 74a8b434e948e594d8177fa1f390cac3, type: 3}
+    - {fileID: 21300000, guid: 3b193af1d6e409a44a7622f4c6d94e47, type: 3}
+    - {fileID: 21300000, guid: 802b83f6a390c0748a4149a70f15e69c, type: 3}
+    - {fileID: 21300000, guid: 50d5775632498cc4187d00816e67d6ac, type: 3}
+    badEmojis:
+    - {fileID: 21300000, guid: dbc3ca12dee170d40b86f4290277b76e, type: 3}
+    - {fileID: 21300000, guid: e25e7cc8ed7a7db49a40e74f3e355c17, type: 3}
+    - {fileID: 21300000, guid: f90d7d76fbbc84546acf26cf4b8f8c04, type: 3}
+    - {fileID: 21300000, guid: 6ed99e49266ea2b4a8ed260bf1021dd3, type: 3}
+    - {fileID: 21300000, guid: 365a5ab9bfef55e4ab15d4d89ea3014c, type: 3}
+    - {fileID: 21300000, guid: 5ac6779836e0924478ea16f32ba3e785, type: 3}
+    - {fileID: 21300000, guid: e89e57aa5f9d01940b88b88e89439d83, type: 3}
+    - {fileID: 21300000, guid: 9ccbc67d7c3bbbc4ebb3deab62b195db, type: 3}

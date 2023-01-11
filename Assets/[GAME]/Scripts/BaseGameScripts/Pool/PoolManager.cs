@@ -1,5 +1,7 @@
 ﻿using Scripts.BaseGameScripts.CoinControl;
+using Scripts.GameScripts;
 using Scripts.GameScripts.ParachuteControl;
+using Scripts.GameScripts.PowerUps;
 using UnityEngine;
 
 namespace Scripts.BaseGameScripts.Pool

@@ -45,7 +45,7 @@ namespace Scripts.BaseGameScripts.Managers
             _levelNum++;
 
             if (_levelNum == SceneManager.sceneCountInBuildSettings) // loop
-                _levelNum = 1;
+                _levelNum = 0;
 
             Save();
 

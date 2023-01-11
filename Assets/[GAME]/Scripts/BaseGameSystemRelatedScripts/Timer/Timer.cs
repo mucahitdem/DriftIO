@@ -1,4 +1,5 @@
 ﻿using System;
+using Scripts.BaseGameScripts.Helper;
 using Sirenix.OdinInspector;
 using UnityEngine;
 
@@ -29,14 +30,24 @@ namespace Scripts.BaseGameSystemRelatedScripts.Timer
                         
                         if (timerVariables.isRepeating)
                         {
-                            ResetTimer();   
+                            ResetTimer();
+                            return;
                         }
+                        
+                        RemoveTimerFromManager();
                     }
                 }
             }
         }
 
         private void Awake()
+        {
+            ResetTimer();
+            if(!timerVariables.startManually)
+                AddTimerToManager();
+        }
+
+        public void StartTimer()
         {
             ResetTimer();
             AddTimerToManager();
@@ -54,6 +65,11 @@ namespace Scripts.BaseGameSystemRelatedScripts.Timer
             TimerManager.Instance.AddNewTimer(this);
         }
 
+        private void RemoveTimerFromManager()
+        {
+            TimerManager.Instance.RemoveTimer(this);
+        }
+
         private void ResetTimer()
         {
             TimerValue = timerVariables.timerValue;
@@ -68,5 +84,8 @@ namespace Scripts.BaseGameSystemRelatedScripts.Timer
         
         [Title("Repeat")]
         public bool isRepeating;
+
+        [Title("Starting Timer")]
+        public bool startManually;
     }
 }

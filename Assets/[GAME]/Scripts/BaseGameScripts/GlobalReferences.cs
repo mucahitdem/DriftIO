@@ -15,5 +15,10 @@ namespace Scripts.BaseGameScripts
 
         [Title("Managers")]
         public UiManager uiManager;
+
+        protected override void OnAwake()
+        {
+            
+        }
     }
 }

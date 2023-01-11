@@ -14,7 +14,7 @@ namespace Scripts.BaseGameScripts.CoinControl
         private float TotalCoins { get; set; }
         
         
-        protected void OnAwake()
+        protected override void OnAwake()
         {
             Load();
             onCoinCountChanged?.Invoke(TotalCoins);

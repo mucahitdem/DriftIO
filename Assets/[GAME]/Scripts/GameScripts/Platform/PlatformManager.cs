@@ -33,13 +33,22 @@ namespace Scripts.GameScripts.Platform
         private void ReleaseGroup()
         {
             onPlatformWidened?.Invoke(_groupIndexToRelease);
-            
             IncreaseGroupIndex();
+            
+            if (AreAllPlatformsDropped())
+            {
+                timer.StopTimer();
+            }
         }
 
         private void IncreaseGroupIndex(int countToAdd = 1)
         {
             _groupIndexToRelease += countToAdd;
+        }
+
+        private bool AreAllPlatformsDropped()
+        {
+            return _groupIndexToRelease > GameManager.Instance.PlatformPiecesManager.PlatformPieceCount;
         }
     }
 }

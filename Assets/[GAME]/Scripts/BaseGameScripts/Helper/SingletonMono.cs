@@ -9,14 +9,27 @@ namespace Scripts.BaseGameScripts.Helper
         {
             get
             {
-                if (s_instance == null)
+                if (!s_instance)
                 {
-                    s_instance = FindObjectOfType(typeof(T)) as T;
+                    s_instance = FindObjectOfType<T>();
                 }
                 return s_instance;
             }
+            set => s_instance = value;
         }
+        protected virtual void Awake()
+        {
+            if (!s_instance)
+            {
+                s_instance = this as T;
+            }
+            
+            OnAwake();
+        }
+        protected abstract void OnAwake();
+
         
+        //todo fix
         // private static T s_instance;
         //
         // public bool dontDestroyOnLoad;
@@ -77,6 +90,6 @@ namespace Scripts.BaseGameScripts.Helper
         //     }
         // }
         //
-        // protected abstract void OnAwake();
+        // protected abstract void OnAwake(); 
     }
 }

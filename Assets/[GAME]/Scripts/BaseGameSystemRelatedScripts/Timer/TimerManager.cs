@@ -8,6 +8,11 @@ namespace Scripts.BaseGameSystemRelatedScripts.Timer
     {
         private List<Timer> _timerList = new List<Timer>();
 
+        protected override void OnAwake()
+        {
+            
+        }
+        
         public void AddNewTimer(Timer timer)
         {
             DebugHelper.LogGreen("TIMER ADDED : " + timer.name);

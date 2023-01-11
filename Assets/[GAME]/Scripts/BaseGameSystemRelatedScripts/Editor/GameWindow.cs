@@ -1,10 +1,11 @@
 using System;
 using Scripts.BaseGameSystemRelatedScripts.Upgrade;
+using Scripts.GameScripts.SO;
 using Sirenix.OdinInspector;
 using Sirenix.OdinInspector.Editor;
 using UnityEditor;
 
-namespace Scripts.GameScripts.Editor
+namespace Scripts.BaseGameSystemRelatedScripts.Editor
 {
     public class GameWindow : OdinMenuEditorWindow
     {
@@ -19,7 +20,9 @@ namespace Scripts.GameScripts.Editor
         {
             var tree = new OdinMenuTree();
             tree.Selection.SupportsMultiSelect = false;
-            tree.Add("UPGRADE", UpgradeDataSo.UpgradesData);
+            tree.Add("Opponents Data", OpponentsDataSo.OpponentsData);
+            tree.Add("Internal Game Data", InternalGameDataSo.InternalGameData);
+
             return tree;
         }
 
@@ -29,7 +32,7 @@ namespace Scripts.GameScripts.Editor
             [Button]
             public void SetDataDirty()
             {
-                //UpgradeDataSo.UpgradesData.SetDataDirty();
+                OpponentsDataSo.OpponentsData.SetDataDirty();
             }
         }
     }

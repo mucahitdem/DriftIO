@@ -70,9 +70,6 @@
                 <e p="EventHelper.cs" t="Include" />
                 <e p="Mediator.cs" t="Include" />
               </e>
-              <e p="Player" t="Include">
-                <e p="PlayerManager.cs" t="Include" />
-              </e>
               <e p="Pool" t="Include">
                 <e p="IPoolObject.cs" t="Include" />
                 <e p="PoolingPattern.cs" t="Include" />
@@ -143,15 +140,15 @@
               </e>
             </e>
             <e p="GameScripts" t="Include">
-              <e p="Ability System" t="Include">
-                <e p="IAbility.cs" t="Include" />
-                <e p="RotatingBall.cs" t="Include" />
-                <e p="WreckingBall.cs" t="Include" />
-              </e>
               <e p="AI" t="Include">
                 <e p="AIManager.cs" t="Include" />
               </e>
-              <e p="BallBehindCar.cs" t="Include" />
+              <e p="Ball" t="Include">
+                <e p="BallManager.cs" t="Include" />
+                <e p="BallWithRope.cs" t="Include" />
+                <e p="BaseBall.cs" t="Include" />
+                <e p="RotatingBall.cs" t="Include" />
+              </e>
               <e p="BasePlayerAndAi.cs" t="Include" />
               <e p="Camera" t="Include">
                 <e p="CameraManager.cs" t="Include" />
@@ -161,6 +158,7 @@
               </e>
               <e p="Defs.cs" t="Include" />
               <e p="GameManager.cs" t="Include" />
+              <e p="GetGivenPointAtWhichDirection.cs" t="Include" />
               <e p="MovementControl" t="Include">
                 <e p="IMovement.cs" t="Include" />
                 <e p="MoveForward.cs" t="Include" />
@@ -168,7 +166,6 @@
               <e p="ParachuteControl" t="Include">
                 <e p="Parachute.cs" t="Include" />
                 <e p="ParachuteCreator.cs" t="Include" />
-                <e p="PowerUp.cs" t="Include" />
               </e>
               <e p="Platform" t="Include">
                 <e p="PlatformCollider.cs" t="Include" />
@@ -180,11 +177,24 @@
               <e p="Player" t="Include">
                 <e p="PlayerManager.cs" t="Include" />
               </e>
+              <e p="PowerUps" t="Include">
+                <e p="BasePowerUp.cs" t="Include" />
+                <e p="PowerUp.cs" t="Include" />
+              </e>
               <e p="Rope" t="Include">
                 <e p="IRope.cs" t="Include" />
                 <e p="RopeWithLineRenderer.cs" t="Include" />
               </e>
               <e p="ShieldCreator.cs" t="Include" />
+              <e p="SO" t="Include">
+                <e p="InternalGameDataSo.cs" t="Include" />
+                <e p="OpponentsDataSo.cs" t="Include" />
+                <e p="PlayerAiCommonDataSo.cs" t="Include" />
+              </e>
+              <e p="StickerManager.cs" t="Include" />
+              <e p="TRigger" t="Include">
+                <e p="ITriggerCollisionHandler.cs" t="Include" />
+              </e>
             </e>
           </e>
         </e>

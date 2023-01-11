@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 791aacade7e84bd8ab870e51197aa629, type: 3}
+  m_Name: Opponents
+  m_EditorClassIdentifier: 
+  playerAiCommonDataSo:
+  - {fileID: 11400000, guid: 9a70f5680ef52d84296f5ecc96b41d9e, type: 2}
+  - {fileID: 11400000, guid: 9c6ba3041fccc7f4a9ee09c6f5689060, type: 2}
+  - {fileID: 11400000, guid: 3ce89c92c68e2fa4ba64e1b97ac2df7d, type: 2}
+  - {fileID: 11400000, guid: df334c85c2ae9524980ff08cf4435bab, type: 2}
