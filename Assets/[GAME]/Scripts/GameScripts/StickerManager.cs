@@ -17,16 +17,30 @@ namespace Scripts.GameScripts
 
         [SerializeField]
         private BasePlayerAndAi basePlayerAndAi;
-        
+
+        private bool _isEnabled;
         private void Awake()
         {
             image.enabled = false;
             _gameData = InternalGameDataSo.InternalGameData.gameData;
         }
 
+        public override void OnEnable()
+        {
+            base.OnEnable();
+            _isEnabled = true;
+        }
+
+        public override void OnDisable()
+        {
+            base.OnDisable();
+            _isEnabled = false;
+        }
+
         private void Update()
         {
-            transform.position = basePlayerAndAi.TransformOfObj.position + Vector3.up * 5f;
+            if(_isEnabled)
+                transform.position = basePlayerAndAi.TransformOfObj.position + Vector3.up * 5f;
         }
 
         public override void SubscribeEvent()

@@ -65,17 +65,20 @@
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Grid/GridElement.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/SingletonMono.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ControlScript/ControlSwipeAndRotate.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Camera/FollowCamera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Camera/CameraManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/KevinCastejon/MoreAttributes/Demos/HeaderPlus/TestHeaderPlusAttribute.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/MinMaxValue.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/SO/OpponentsDataSo.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStates/GameState02_0Playing.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Control/ControlTypes/ControlSwipeAndPosition.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Hierarchy 2/Editor/HierarchyEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameSystemRelatedScripts/Timer/TimerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/BOXOPHOBIC/Polyverse Skies/Core/Runtime/PolyverseSkies.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/State/GameStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Defs.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/SO/PlayerAiCommonDataSo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Others/TextMesh Pro/Shaders/TMP_SDF.shader" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/PowerUps/PowerUp.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Input/Input.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Rope/RopeWithLineRenderer.cs" root0="FORCE_HIGHLIGHTING" />
@@ -84,12 +87,11 @@
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GetGivenPointAtWhichDirection.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Rope/IRope.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Pool/IPoolObject.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PathCreator/Core/Runtime/Utility/MathUtility.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ParachuteControl/PowerUp.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Mediator/EventHelper.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ShieldCreator.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Trigger/BaseTrigger.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Trigger/BaseTriggerCollision.cs" />
@@ -128,17 +130,19 @@
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Player/PlayerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/EmojiManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/SO/InternalGameDataSo.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StickerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Managers/LevelManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Ball/BaseBall.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Ball/RotatingBall.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Ball/BallWithRope.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/Defs.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/BasePlayerAndAi.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/ContextClass.cs" />
-        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ControlScript/ControlSwipeAndRotate.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Input/Input.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/BaseGameScripts/Helper/ShortCutManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/StickerManager.cs" />
         <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/AI/AiManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/ControlScript/ControlSwipeAndRotate.cs" />
+        <option value="$PROJECT_DIR$/Assets/[GAME]/Scripts/GameScripts/BasePlayerAndAi.cs" />
       </list>
     </option>
   </component>
@@ -176,10 +180,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="794" y="256" key="RiderGenerateDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1673406955238" />
-    <state x="567" y="275" width="957" height="620" key="find.popup" timestamp="1673448131918">
+    <state x="567" y="275" width="957" height="620" key="find.popup" timestamp="1673508349526">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="567" y="275" width="957" height="620" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1673448131918" />
+    <state x="567" y="275" width="957" height="620" key="find.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1673508349526" />
     <state x="616" y="192" width="670" height="676" key="search.everywhere.popup" timestamp="1673419527249">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>

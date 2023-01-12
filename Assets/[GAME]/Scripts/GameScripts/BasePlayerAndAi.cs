@@ -64,6 +64,7 @@ namespace Scripts.GameScripts
         {
             Rb.velocity = Vector3.zero;
             Rb.constraints = RigidbodyConstraints.None;
+            
             Rb.AddForce(dir, ForceMode.Impulse);
             Rb.angularVelocity = Random.insideUnitSphere * Random.Range(30f, 50f);
         }

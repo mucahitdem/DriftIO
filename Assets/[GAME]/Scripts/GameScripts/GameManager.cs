@@ -41,8 +41,8 @@ namespace Scripts.GameScripts
         
         protected override void OnAwake()
         {
+            Application.targetFrameRate = 60;
             Time.timeScale = 1f;
-
         }
 
         public void RemoveItem(BasePlayerAndAi basePlayerAndAi)
@@ -62,8 +62,13 @@ namespace Scripts.GameScripts
                     GlobalReferences.Instance.uiManager.ShowScreen("loseScreen");
                 }
 
-                DOVirtual.DelayedCall(1, ()=> Time.timeScale = 0f);
+                DOVirtual.DelayedCall(1, ()=> Time.timeScale = 0f).SetId("FREEZEGAME");
             }
+        }
+
+        private void OnDisable()
+        {
+            DOTween.Kill("FREEZEGAME");
         }
     }
 }

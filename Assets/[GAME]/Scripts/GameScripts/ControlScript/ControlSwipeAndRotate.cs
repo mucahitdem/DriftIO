@@ -6,9 +6,6 @@ namespace Scripts.GameScripts.ControlScript
 {
     public class ControlSwipeAndRotate : BaseControlGetDeltaMouse
     {
-        [Header("Swipe Variables")]
-        public MinMaxValue clampValues;
-
         public float lerpMultiplier = 1;
         public float mouseDamp = 600;
 
@@ -27,15 +24,21 @@ namespace Scripts.GameScripts.ControlScript
             Swipe();
         }
 
+        protected override void OnTapHoldAndNotMove()
+        {
+            base.OnTapHoldAndNotMove();
+            Swipe();
+        }
+
         private void Swipe()
         {
             var objRot = TransformOfObj.eulerAngles;
 
             var yRot = objRot.y;
-            yRot = Mathf.Lerp(yRot, yRot + mouseDamp * (DeltaMouse.x / _screenWidth), Time.deltaTime * lerpMultiplier);
+            yRot = Mathf.Lerp(yRot, yRot + (mouseDamp * (DeltaMouse.x / _screenWidth)), Time.deltaTime * lerpMultiplier);
 
             TransformOfObj.eulerAngles = new Vector3(objRot.x, yRot, objRot.z);
-            
+            //calculateDeltaMouse.ResetValues();
         }
     }
 }

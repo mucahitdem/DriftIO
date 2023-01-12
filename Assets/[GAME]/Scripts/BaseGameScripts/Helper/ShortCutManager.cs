@@ -11,6 +11,7 @@ namespace Scripts
         private ShortCutData _shortCutData;
         public List<ShortCutData> keycodes = new List<ShortCutData>();
 
+        #if UNITY_EDITOR
         private void Update()
         {
             for (var i = 0; i < keycodes.Count; i++)
@@ -19,6 +20,7 @@ namespace Scripts
                 if (Input.GetKeyDown(_shortCutData.keyCode)) _shortCutData.unityEvent?.Invoke();
             }
         }
+        #endif
     }
 
     [Serializable]

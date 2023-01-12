@@ -60,7 +60,7 @@ namespace Scripts.GameScripts.AI
             _tryToStayOnPlatform.GetVariables();
         }
 
-        private void Update()
+        protected void Update()
         {
             if(!canControl)
                 return;
@@ -102,7 +102,7 @@ namespace Scripts.GameScripts.AI
             if (GameManager.Instance)
             {
                 GameManager.Instance.PlatformRadiusController.onPlatformRadiusChanged -= OnPlatformRadiusChanged;
-                GameManager.Instance.opponentRemoved += NearestOpponents.ResetData;
+                GameManager.Instance.opponentRemoved -= NearestOpponents.ResetData;
             }
                 
             timerForSearchOpponents.onTimerEnded -= NearestOpponents.GetRandomOpponent;
@@ -185,6 +185,9 @@ namespace Scripts.GameScripts.AI
         private BasePlayerAndAi _nearestOpponent;
         private float _nearestDistance;
         private FindNearestOpponentData _findNearestOpponentData;
+
+
+        private BasePlayerAndAi _randomOpponent;
         public FindNearestOpponents(FindNearestOpponentData findNearestOpponentData)
         {
             _findNearestOpponentData = findNearestOpponentData;
@@ -203,34 +206,36 @@ namespace Scripts.GameScripts.AI
             for (int i = 0; i < 20; i++) // we can make it more cleverly
             {
                 int randomNumber = Random.Range(0, GameManager.Instance.allOpponents.Count);
-                BasePlayerAndAi currentOpponent = GameManager.Instance.allOpponents[randomNumber];
+                _randomOpponent = GameManager.Instance.allOpponents[randomNumber];
                 
-                if(currentOpponent.TransformOfObj == _findNearestOpponentData.transformObj)
+                if(_randomOpponent.TransformOfObj == _findNearestOpponentData.transformObj)
                     continue;
-                _nearestOpponent = currentOpponent;
+                
+                _nearestOpponent = _randomOpponent;
+                break;
             }
         }
         
-        public void FindNearestOpponent() // update every X seconds - 1 or 2 is enough
-        {
-            for (int i = 0; i < GameManager.Instance.allOpponents.Count; i++)
-            {
-                BasePlayerAndAi currentOpponent = GameManager.Instance.allOpponents[i];
-                
-                if(currentOpponent.TransformOfObj == _findNearestOpponentData.transformObj)
-                    continue;
-
-                var distance = Vector3.Distance(currentOpponent.TransformOfObj.position, _findNearestOpponentData.transformObj.position);
-                if (distance < _nearestDistance)
-                {
-                    _nearestDistance = distance;
-                    _nearestOpponent = currentOpponent;
-                }
-            }
-
-            if (_nearestOpponent == null)
-                Time.timeScale = 0f;
-        }
+        // public void FindNearestOpponent() // update every X seconds - 1 or 2 is enough
+        // {
+        //     for (int i = 0; i < GameManager.Instance.allOpponents.Count; i++)
+        //     {
+        //         BasePlayerAndAi currentOpponent = GameManager.Instance.allOpponents[i];
+        //         
+        //         if(currentOpponent.TransformOfObj == _findNearestOpponentData.transformObj)
+        //             continue;
+        //
+        //         var distance = Vector3.Distance(currentOpponent.TransformOfObj.position, _findNearestOpponentData.transformObj.position);
+        //         if (distance < _nearestDistance)
+        //         {
+        //             _nearestDistance = distance;
+        //             _nearestOpponent = currentOpponent;
+        //         }
+        //     }
+        //
+        //     if (_nearestOpponent == null)
+        //         Time.timeScale = 0f;
+        // }
 
         public BasePlayerAndAi GetNearestOpponent()
         {

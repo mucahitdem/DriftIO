@@ -53,6 +53,8 @@ namespace Scripts.BaseGameScripts.Input
 
         private void TouchControl()
         {
+            if(UnityEngine.Input.touchCount <= 0)
+                return;
             switch (UnityEngine.Input.touches[0].phase)
             {
                 case TouchPhase.Began:
